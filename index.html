@@ -4,11 +4,12 @@
   </head>
   <body>
     <a-scene>
-      <a-box position="-1 0 -3" rotation="0 45 0" color="#E63D97"></a-box>
-      <a-sphere position="0 0 -5" radius="1" color="#EBBA53"></a-sphere>
-      <a-cylinder position="1 0 -3" radius="0.25" height="1.5" color="#3DC6E6"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="90 0 0" width="99999" height="99999" color="#64D9A4"></a-plane>
-      <a-sky color="#0034C9"></a-sky>
+      <a-assets>
+           <a-asset-item id="cell-obj" src="cell.obj"></a-asset-item> 
+           <a-asset-item id="cell-mtl" src="cell.mtl"></a-asset-item> 
+           <a-entity obj-model="obj: #cell-obj; mtl: #cell-mtl" scale="0.01 0.01 0.01" rotation="-90 0 0" position="0 2 -5"></a-entity>
+      </a-assets>
+      <a-sky color="#64D9A4"></a-sky>
     </a-scene>
   </body>
 </html>
